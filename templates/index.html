@@ -1,23 +1,41 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>LUMIÉREGYN • Atualização de Estoque</title>
+    <meta charset="UTF-8">
+    <title>Painel Administrativo • LUMIÉREGYN</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="version-banner">VERSÃO 2025 – INTERFACE ATUALIZADA</div>
-    <div class="container">
-        <img src="/static/logo.jpg" alt="LUMIÉREGYN" class="logo">
-        <h2>Atualizar Planilhas com Base no Estoque</h2>
-        <form action="/upload/" enctype="multipart/form-data" method="post">
-            <label>Planilha de Estoque (.xlsx):</label><br>
-            <input type="file" name="estoque" required><br>
-            <label>Planilha de Produtos (.xlsx):</label><br>
-            <input type="file" name="produto" required><br><br>
-            <button type="submit">Atualizar Estoque</button>
-        </form>
-        <div class="footer">© 2025 LUMIÉREGYN – Todos os direitos reservados</div>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="/static/logo.jpg" alt="LUMIÉREGYN">
+        </div>
+        <ul>
+            <li class="active">Início</li>
+            <li><a href="#upload">Atualizar Estoque</a></li>
+            <li><a href="#historico">Histórico</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="section" id="upload">
+            <h2>Atualizar Estoque</h2>
+            <form action="/upload/" enctype="multipart/form-data" method="post">
+                <label>Planilha de Estoque (.xlsx)</label><br>
+                <input type="file" name="estoque" required><br><br>
+                <label>Planilha de Produtos (.xlsx)</label><br>
+                <input type="file" name="produto" required><br><br>
+                <button type="submit">Atualizar</button>
+            </form>
+        </div>
+        <div class="section" id="historico">
+            <h2>Histórico de Envios</h2>
+            <table>
+                <tr><th>Arquivo</th><th>Data</th><th>Tipo</th></tr>
+                <tr><td>estoque_07-04.xlsx</td><td>14/04/2025</td><td>Estoque</td></tr>
+                <tr><td>produtos_07-04.xlsx</td><td>14/04/2025</td><td>Produtos</td></tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>
