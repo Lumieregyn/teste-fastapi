@@ -1,14 +1,25 @@
+
 <!DOCTYPE html>
 <html>
-<head><title>Atualizar Estoque</title></head>
+<head>
+    <title>LUMIÉREGYN • Atualização de Estoque</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
 <body>
-    <h2>Atualizar Planilhas com Base no Estoque</h2>
-    <form action="/upload/" enctype="multipart/form-data" method="post">
-        <label>Planilha de Estoque (.xlsx):</label><br>
-        <input type="file" name="estoque" required><br><br>
-        <label>Planilha de Produtos (.xlsx):</label><br>
-        <input type="file" name="produto" required><br><br>
-        <button type="submit">Atualizar Estoque</button>
-    </form>
+    <div style="background-color: #222; color: #fff; padding: 8px 0; font-size: 14px;">
+        <strong>VERSÃO 2025 – INTERFACE ATUALIZADA</strong>
+    </div>
+    <div class="container">
+        <img src="/static/logo.jpg" alt="LUMIÉREGYN" class="logo">
+        <h2>Atualizar Planilhas com Base no Estoque</h2>
+        <form action="/upload/" enctype="multipart/form-data" method="post">
+            <label>Planilha de Estoque (.xlsx):</label><br>
+            <input type="file" name="estoque" required><br>
+            <label>Planilha de Produtos (.xlsx):</label><br>
+            <input type="file" name="produto" required><br><br>
+            <button type="submit">Atualizar Estoque</button>
+        </form>
+        <div class="footer">© 2025 LUMIÉREGYN – Todos os direitos reservados</div>
+    </div>
 </body>
 </html>
