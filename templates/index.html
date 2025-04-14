@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head><title>Teste de Interface</title></head>
+<head><title>Atualizar Estoque</title></head>
 <body>
-    <h1>Aplicação está funcionando 🎉</h1>
-    <p>Este é um teste de rota com FastAPI e Jinja2.</p>
+    <h2>Atualizar Planilhas com Base no Estoque</h2>
+    <form action="/upload/" enctype="multipart/form-data" method="post">
+        <label>Planilha de Estoque (.xlsx):</label><br>
+        <input type="file" name="estoque" required><br><br>
+        <label>Planilha de Produtos (.xlsx):</label><br>
+        <input type="file" name="produto" required><br><br>
+        <button type="submit">Atualizar Estoque</button>
+    </form>
 </body>
 </html>
